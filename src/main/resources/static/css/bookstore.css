@@ -1,0 +1,69 @@
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+	background-color: #fff5c7;
+	margin: 2px; 
+	padding: 0; 
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: stretch; /*这个是默认的不用写*/
+    justify-content: flex-start; /*这个是默认的不用写*/
+    position: relative;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3a3b46;
+}
+ 
+li {
+    float: left;
+}
+ 
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+ 
+/*鼠标移动到选项上修改背景颜色 */
+li a:hover {
+    background-color: #737373;
+}
+
+.pagetitle{
+	position: absolute;
+	top: 70px;	
+	left: 0;
+	right: 0;
+	text-align:center;
+	font-size: 45px;
+	color: #737373;
+	/* 此时不能改margin了，只能改padding，给body加上position的relative，然后修改h1的position */
+}
+
+form{
+	 flex: 1 1 0;
+}
+
+.info{
+	display: flex;
+	flex-direction: column;
+	/* justify-content: center; */
+	align-items:center;
+	height: 100%;
+	margin: 140px;
+}
+table,th, td{
+	margin: 20px;
+  font-size: 20px;
+  color: #656565;
+  border: 1px solid black;
+}

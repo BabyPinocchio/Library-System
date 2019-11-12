@@ -1,0 +1,81 @@
+html{
+	height: 100%;
+}
+body{
+	min-height: 100%;
+	position: relative;
+}
+.page-background{
+	background-image: url('/images/index.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	/* background-repeat: no-repeat; */
+}
+.bookpage-background{
+	background-image: url('/images/bookindex.jpg');
+	background-size: cover;
+	background-position: center;
+	height: 100%;
+	/* background-repeat: no-repeat; */
+}
+ a, a:link, a:hover, a:active, a:visited {
+ 	text-decoration: none;
+ }
+.btn {
+    background-color: #808080; /* Green */
+    border: 2px solid #4CAF50;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    /* text-decoration: none; */
+    display: block;
+  /*   display: inline-block; */
+    font-size: 16px;
+    border-radius: 8px;
+    /* width: 20%; */
+    width: 300px;
+    margin: 10px;
+}
+.btn-group{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:center;
+	height: 100%;
+}
+.pagetitle{
+	position: absolute;
+	top: 20px;	
+	left: 0;
+	right: 0;
+	text-align:center;
+	font-size: 45px;
+	color: #737373;
+	/* 此时不能改margin了，只能改padding，给body加上position的relative，然后修改h1的position */
+}
+.bookpagetitle{
+	position: absolute;
+	top: 20px;	
+	left: 0;
+	right: 0;
+	text-align:center;
+	font-size: 45px;
+	color: #fff;
+	/* 此时不能改margin了，只能改padding，给body加上position的relative，然后修改h1的position */
+}
+.bton {
+    background-color: #dadde3; /* Green */
+    border: 2px solid #4CAF50;
+    color: #808080;
+    padding: 15px 32px;
+    text-align: center;
+    /* text-decoration: none; */
+    display: block;
+  /*   display: inline-block; */
+    font-size: 16px;
+    border-radius: 8px;
+    /* width: 20%; */
+    width: 300px;
+    margin: 10px;
+}
