@@ -45,7 +45,7 @@ public class IndexController {
 		 return "borrowrecord.jsp";
 	 }
 	 
-	 @RequestMapping("/bookSearch")
+	 @RequestMapping("/bookStore/bookSearch")
 	 public String bookSearch() {
 		 return "bookSearch.jsp";
 	 }

@@ -13,7 +13,7 @@
          	function confirmOrder(relationId) {
          		/* console.log(bookId) */
          		event.preventDefault();
-         		alert("Do you want to return this book? ")
+         		confirm("Do you want to return this book? ")
          		$.ajax({
                     url:"/borrowRecord/returnBook?relationId="+relationId,
                     method: 'POST',

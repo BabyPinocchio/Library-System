@@ -8,7 +8,7 @@
 		 	<!-- 后端如何和前端通信,把后端的添加成功或者失败的消息传给前端 -->
 			 <script>
 		    	function confirmDialog(){
-					alert("Do you want to delete this book? ")
+		    		confirm("Do you want to delete this book? ")
 		    	}
 		    </script> 
 	</head>

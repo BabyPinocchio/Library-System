@@ -99,9 +99,33 @@ public class BookController {
 	 @RequestMapping(value = "/bookStore/bookSearch",method = RequestMethod.POST)
 	 public String bookSearch(@RequestParam("bookName") String bookName,HttpServletRequest req, HttpSession session) {
 		 Book book = bookRepository.findByBookName(bookName);
-		 if(book!=null) {
-			 session.setAttribute("book", book);
-		 }
-		 return "bookSearch.jsp";
+		 session.setAttribute("book", book);
+//		 if(book!=null) {
+//			 session.setAttribute("book", book);
+//		 }
+		 return "/bookSearch.jsp";
+	 }
+	 
+	 @RequestMapping(value = "/bookStore/bookSearch/borrowBook",method = RequestMethod.POST)
+	 public String borrowBook(HttpServletRequest req, HttpSession session) {
+		 int bookId = Integer.parseInt(req.getParameter("bookId"));
+		 Book book = bookServiceImpl.findByBookId(bookId);
+		 // System.out.println("Book Name: " + book.getBookId());
+		 if(book != null) {
+				bookServiceImpl.updateNum(bookId, -1);
+				String bookName = book.getBookName();
+				
+				User user = (User) session.getAttribute("user");
+				Relation relation = new Relation();
+				relation.setBookName(bookName);
+				relation.setBookId(book.getBookId());
+				relation.setUserId(user.getUserId());
+				Date date = new Date();
+				relation.setTime(date);
+				relationServiceImpl.addManagement(relation);
+			}else {
+				session.setAttribute("res","Borrow Book Failed !");
+			}
+		 return "Success";
 	 }
 }
